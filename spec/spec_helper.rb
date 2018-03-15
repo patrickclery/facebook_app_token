@@ -1,5 +1,5 @@
 require "bundler/setup"
-require "tinder_auth_fetcher"
+require "facebook_auth_fetcher"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
