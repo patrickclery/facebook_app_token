@@ -1,4 +1,4 @@
-# Description
+# FacebookAuthFetcher
 
 FacebookAuthFetcher is a fork of [tinder_auth_fetcher gem](https://github.com/shuheiktgw/tinder_auth_fetcher) that can retrieve an authentication token for any facebook app (not just Tinder).
 
@@ -43,8 +43,9 @@ I wrote only two test cases, one that asserts it raises `FacebookAuthFetcher::Fa
 
 First you have to provide valid Facebook email and password through environment variables.
 
-    $ export export FACEBOOK_AUTH_EMAIL="you_facebook_email@gmail.com"
-    $ export FACEBOOK_AUTH_PASSWORD="you_facebook_password"
+    $ export FACEBOOK_AUTH_EMAIL="your_facebook_email@gmail.com"
+    $ export FACEBOOK_AUTH_PASSWORD="your_facebook_password"
+    $ export FACEBOOK_AUTH_APP_ID="your_facebook_app_id"   (use 464891386855067 for tinder)
 
 Then all you need to do is just runing the RSpec.
 
