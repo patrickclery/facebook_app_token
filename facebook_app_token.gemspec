@@ -1,16 +1,16 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'facebook_auth_fetcher/version'
+require 'facebook_app_token/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "facebook_auth_fetcher"
-  spec.version       = FacebookAuthFetcher::VERSION
+  spec.name          = "facebook_app_token"
+  spec.version       = FacebookAppToken::VERSION
   spec.authors       = ["Patrick Clery"]
   spec.email         = ["patrick.clery@gmail.com"]
 
-  spec.summary       = %q{FacebookAuthFetcher enables you to retrieve a Facebook authentication token, which is necessary to use Tinder API}
-  spec.homepage      = "https://github.com/pwntrik/facebook_auth_fetcher"
+  spec.summary       = %q{FacebookAppToken enables you to retrieve a Facebook authentication token, which is necessary to use Tinder API}
+  spec.homepage      = "https://github.com/pwntrik/facebook_app_token"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|

@@ -1,5 +1,5 @@
 require "bundler/setup"
-require "facebook_auth_fetcher"
+require "facebook_app_token"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

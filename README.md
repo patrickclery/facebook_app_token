@@ -1,6 +1,6 @@
-# FacebookAuthFetcher
+# FacebookAppToken
 
-FacebookAuthFetcher is a fork of [tinder_auth_fetcher gem](https://github.com/shuheiktgw/tinder_auth_fetcher) that can retrieve an authentication token for any facebook app (not just Tinder).
+FacebookAppToken is a fork of [tinder_auth_fetcher gem](https://github.com/shuheiktgw/tinder_auth_fetcher) that can retrieve an authentication token for any facebook app (not just Tinder).
 
 ## Dependencies
 - [Mechanize](https://github.com/sparklemotion/mechanize)
@@ -10,7 +10,7 @@ FacebookAuthFetcher is a fork of [tinder_auth_fetcher gem](https://github.com/sh
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'facebook_auth_fetcher'
+gem 'facebook_app_token'
 ```
 
 And then execute:
@@ -19,27 +19,27 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install facebook_auth_fetcher
+    $ gem install facebook_app_token
 
 ## Usage
-First thing is first. Make sure that you've required facebook_auth_fetcher.
-$ gem install facebook_auth_fetcher
+First thing is first. Make sure that you've required facebook_app_token.
+$ gem install facebook_app_token
 
 
 ```ruby
-require 'facebook_auth_fetcher'
+require 'facebook_app_token'
 ```
 
-Now all you need to do is just call #FacebookAuthFetcher.fetch_token with target facebook email address and password. Then it will return the token.
+Now all you need to do is just call #FacebookAppToken.fetch_token with target facebook email address and password. Then it will return the token.
 
 ```ruby
-token = FacebookAuthFetcher.fetch_token(facebook_email, facebook_password)
+token = FacebookAppToken.fetch_token(facebook_email, facebook_password)
 ```
 
-**Notice**: FacebookAuthFetcher raises `FacebookAuthFetcher::FacebookAuthenticationError` with the message "Facebook Authentication failed. Check if you passed correct email and password" if it failed to log in, so you might want to deal with it.
+**Notice**: FacebookAppToken raises `FacebookAppToken::FacebookAuthenticationError` with the message "Facebook Authentication failed. Check if you passed correct email and password" if it failed to log in, so you might want to deal with it.
 
 ## Test
-I wrote only two test cases, one that asserts it raises `FacebookAuthFetcher::FacebookAuthenticationError` when it fails to fetch the token and the one which asserts it fetches the token correctly.
+I wrote only two test cases, one that asserts it raises `FacebookAppToken::FacebookAuthenticationError` when it fails to fetch the token and the one which asserts it fetches the token correctly.
 
 First you have to provide valid Facebook email and password through environment variables.
 
@@ -59,7 +59,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/pwntrik/facebook_auth_fetcher. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/pwntrik/facebook_app_token. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 
 ## License

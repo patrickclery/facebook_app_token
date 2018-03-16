@@ -1,7 +1,7 @@
-require 'facebook_auth_fetcher/version'
+require 'facebook_app_token/version'
 require 'mechanize'
 
-module FacebookAuthFetcher
+module FacebookAppToken
   USER_AGENT = 'Mozilla/5.0 (Linux; U; en-gb; KFTHWI Build/JDQ39) AppleWebKit/535.19 (KHTML, like Gecko) Silk/3.16 Safari/535.19'
 
   class FacebookAuthenticationError < StandardError; end
@@ -33,7 +33,7 @@ module FacebookAuthFetcher
     page = agent.get(uri)
 
     if page.title == 'Error'
-      raise FacebookAuthFetcher::FacebookAuthenticationError, 'Facebook Authentication failed. Invalid App ID specified'
+      raise FacebookAppToken::FacebookAuthenticationError, 'Facebook Authentication failed. Invalid App ID specified'
     end
 
     f = page.forms[0]
@@ -43,7 +43,7 @@ module FacebookAuthFetcher
     res = agent.submit f
 
     if res.uri.path.start_with? '/login'
-      raise FacebookAuthFetcher::FacebookAuthenticationError, 'Facebook Authentication failed. Check if you passed correct email and password'
+      raise FacebookAppToken::FacebookAuthenticationError, 'Facebook Authentication failed. Check if you passed correct email and password'
     end
 
     res
