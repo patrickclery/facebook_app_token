@@ -7,7 +7,7 @@ module FacebookAppToken
   class FacebookAuthenticationError < StandardError; end
 
   def self.login_uri(app_id)
-    "https://m.facebook.com/v2.10/dialog/oauth?client_id=#{URI::encode(app_id)}&scope=public_profile%2Cuser_education_history%2Cuser_friends%2Cemail%2Cuser_likes%2Cuser_photos%2Cuser_relationships%2Cuser_work_history%2Cuser_birthday&default_audience=friends&redirect_uri=fbconnect%3A%2F%2Fsuccess&auth_type=rerequest&display=touch&response_type=token%2Csigned_request&return_scopes=true"
+    "https://m.facebook.com/v2.10/dialog/oauth?client_id=#{URI::encode(app_id.to_s)}&scope=public_profile%2Cuser_education_history%2Cuser_friends%2Cemail%2Cuser_likes%2Cuser_photos%2Cuser_relationships%2Cuser_work_history%2Cuser_birthday&default_audience=friends&redirect_uri=fbconnect%3A%2F%2Fsuccess&auth_type=rerequest&display=touch&response_type=token%2Csigned_request&return_scopes=true"
   end
 
   def self.fetch_token(email, password, app_id)

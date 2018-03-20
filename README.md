@@ -33,7 +33,7 @@ require 'facebook_app_token'
 Now all you need to do is just call #FacebookAppToken.fetch_token with target facebook email address and password. Then it will return the token.
 
 ```ruby
-token = FacebookAppToken.fetch_token(facebook_email, facebook_password)
+token = FacebookAppToken.fetch_token(facebook_email, facebook_password, facebook_app_id)
 ```
 
 **Notice**: FacebookAppToken raises `FacebookAppToken::FacebookAuthenticationError` with the message "Facebook Authentication failed. Check if you passed correct email and password" if it failed to log in, so you might want to deal with it.
